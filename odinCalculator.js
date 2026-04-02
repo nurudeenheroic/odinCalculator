@@ -8,3 +8,7 @@ function evaluateItem() {
         display.value = 'Error';
     }
 };
+function clearItem() {
+
+    display.value = '';
+};
