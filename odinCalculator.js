@@ -15,3 +15,16 @@ function clearItem() {
 function deleteItem() {
    display.value = display.value.slice(0, -1);
 };
+let operatorArray = ['+', '-', '*', '/'];
+function addOperator(operator) {
+    if (display.value === '' && operatorArray.includes(operator)) {
+        return;
+    } else if(display.value.endsWith(operator)) {
+        return;
+    } else if (isCalculated === true) {
+        display.value += operator;
+        isCalculated = false;
+    } else if (isCalculated === false) {
+        display.value += operator;
+    }
+};
