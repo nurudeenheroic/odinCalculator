@@ -12,3 +12,6 @@ function clearItem() {
 
     display.value = '';
 };
+function deleteItem() {
+   display.value = display.value.slice(0, -1);
+};
